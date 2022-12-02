@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const buttonClick = document.getElementById('click-here-btn')
 const clickCounter = document.getElementById('click-counter')
 
@@ -9,3 +10,25 @@ const countClicks = () => {
 
 
 buttonClick.addEventListener('click', countClicks)
+=======
+// funcion para almacenar el nombre en el objeto player
+function changeValue() {
+  player.name = userNameInput.value;
+}
+// funcion para almacenar el jugador en localStorage
+function saveLocalStorageInfo(e) {
+  e.preventDefault();
+  localStorage.setItem(keyPlayer, JSON.stringify(player));
+  keyPlayer++;
+}
+// esta funcion es la cuenta atrás para el número de click
+function updateClock() {
+    document.querySelector('.countdown').innerHTML = countdownTotal;
+    if(countdownTotal==0){
+      console.log('Final');
+    }else{
+      countdownTotal-=1;
+      setTimeout("updateClock()",1000);
+    }
+  }
+>>>>>>> f6475cbd106b86f98e01a3350b1cd65b9b8833e5
