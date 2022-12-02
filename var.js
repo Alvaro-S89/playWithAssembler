@@ -1,4 +1,4 @@
-// variables user name
+// variablesUN
 let userNameInput = document.getElementById("user-name");
 let userNameBtn = document.querySelector("#username button");
 
@@ -13,6 +13,7 @@ const buttonClick = document.getElementById("click-here-btn");
 const clickCounter = document.getElementById("click-counter");
 
 let counter = 0;
+let gameover = false
 
 // variables cuenta atrás
 let btnstartGame = document.querySelector(".btn-startGame");
