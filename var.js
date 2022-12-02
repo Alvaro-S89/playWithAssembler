@@ -1,4 +1,3 @@
-
 // variables user name
 let userNameInput = document.getElementById("user-name");
 let userNameBtn = document.querySelector("#username button");
@@ -8,16 +7,19 @@ let player = {
   score: "Currently Playing",
 };
 
-let keyPlayer = 1;
+let keyPlayer = Number(localStorage.length);
 
+const buttonClick = document.getElementById("click-here-btn");
+const clickCounter = document.getElementById("click-counter");
+
+let counter = 0;
 
 // variables cuenta atrás
 let btnstartGame = document.querySelector(".btn-startGame");
 let countdownTotal = 10;
 
-
-
 // Escuchadore de eventos
-btnstartGame.addEventListener('click', updateClock);
+btnstartGame.addEventListener("click", updateClock);
 userNameInput.addEventListener("change", changeValue);
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
+buttonClick.addEventListener("click", countClicks);
