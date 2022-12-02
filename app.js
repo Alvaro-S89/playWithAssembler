@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const buttonClick = document.getElementById('click-here-btn')
 const clickCounter = document.getElementById('click-counter')
 
@@ -10,7 +9,6 @@ const countClicks = () => {
 
 
 buttonClick.addEventListener('click', countClicks)
-=======
 // funcion para almacenar el nombre en el objeto player
 function changeValue() {
   player.name = userNameInput.value;
@@ -31,4 +29,3 @@ function updateClock() {
       setTimeout("updateClock()",1000);
     }
   }
->>>>>>> f6475cbd106b86f98e01a3350b1cd65b9b8833e5
