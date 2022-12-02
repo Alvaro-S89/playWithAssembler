@@ -15,11 +15,29 @@ function saveLocalStorageInfo(e) {
 }
 // esta funcion es la cuenta atrás para el número de click
 function updateClock() {
-  document.querySelector(".countdown").innerHTML = countdownTotal;
+  countDown.innerHTML = countdownTotal;
   if (countdownTotal == 0) {
     gameover = true;
   } else {
     countdownTotal -= 1;
     setTimeout("updateClock()", 1000);
   }
+}
+
+//esta funcion es para jugar de nuevo
+
+function playAgain() {
+  player = {
+    name: "",
+    score: "Currently Playing",
+  };
+
+  keyPlayer = Number(localStorage.length);
+  countdownTotal = 10;
+  counter = 0;
+  gameover = false;
+
+  userNameInput.value = "";
+  countDown.innerHTML = "";
+  clickCounter.innerText = "";
 }
