@@ -23,9 +23,20 @@ let countdownTotal = 10;
 //variables playAgain
 
 const playAgainBtn = document.querySelector(".playAgain");
+// Variables ranking
+
+let players = []
+let infoRanking = document.querySelector(".infoRanking")
+
+
+
+
 
 // Escuchadore de eventos
 btnstartGame.addEventListener("click", updateClock);
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
 playAgainBtn.addEventListener("click", playAgain);
+
+
+
