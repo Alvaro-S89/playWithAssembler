@@ -3,15 +3,17 @@ const countClicks = () => {
   counter++;
   clickCounter.innerText = counter;
 };
-// funcion para almacenar el nombre en el objeto player
-function changeValue() {
-  player.name = userNameInput.value;
-}
+
 // funcion para almacenar el jugador en localStorage
 function saveLocalStorageInfo(e) {
   e.preventDefault();
-  keyPlayer++;
-  localStorage.setItem(keyPlayer, JSON.stringify(player));
+  if (userNameInput.value === "") {
+    alert("Enter your username");
+  } else {
+    player.name = userNameInput.value;
+    keyPlayer++;
+    localStorage.setItem(keyPlayer, JSON.stringify(player));
+  }
 }
 // esta funcion es la cuenta atrás para el número de click
 function updateClock() {

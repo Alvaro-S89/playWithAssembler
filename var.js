@@ -26,7 +26,6 @@ const playAgainBtn = document.querySelector(".playAgain");
 
 // Escuchadore de eventos
 btnstartGame.addEventListener("click", updateClock);
-userNameInput.addEventListener("change", changeValue);
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
 playAgainBtn.addEventListener("click", playAgain);
