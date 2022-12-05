@@ -10,7 +10,7 @@ let player = {
 let keyPlayer = Number(localStorage.length);
 
 const buttonClick = document.getElementById("click-here-btn");
-const clickCounter = document.getElementById("click-counter");
+const clickCounterElements = document.querySelectorAll(".click-counter");
 
 let counter = 0;
 let gameover = false;

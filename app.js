@@ -1,7 +1,9 @@
 const countClicks = () => {
   if (gameover) return;
   counter++;
-  clickCounter.innerText = counter;
+  for(const element of clickCounterElements){
+    element.innerText = counter;
+  }
 };
 
 // funcion para almacenar el jugador en localStorage
