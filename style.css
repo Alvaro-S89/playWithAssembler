@@ -2,7 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fecea8;
+}
+@font-face {
+  font-family: "gamer";
+  src: url("assets/fonts/gamer.ttf") format("ttf"),
+       url("assets/fonts/gamer.woff2") format("woff2"), 
+       url("assets/fonts/gamer.woff") format("woff"),
+       url("assets/fonts/gamer.eot") format("eot"),
+       url("assets/fonts/gamer.otf") format("otf"),
+       url("assets/fonts/gamer.svg") format("svg");
 }
 
 #ranking {
@@ -13,6 +21,24 @@
   right: 0;
   background-color: #011133;
   margin: 2vh 1vw 2vh 1vw;
+}
+#ranking h2{
+  font-family: 'gamer', sans-serif;
+  font-size: 50px;
+  -webkit-text-fill-color: #d95204;
+  padding: 20px;
+}
+.infoRanking h3{
+  color: #f2a516;
+  font-family: 'gamer', sans-serif;
+  font-size: 40px;
+  padding: 10px;
+}
+.infoRanking h4{
+  color: #d95204;
+  font-family: 'gamer', sans-serif;
+  font-size: 30px;
+  padding: 10px;
 }
 
 #username,
@@ -31,7 +57,6 @@
   background-repeat: repeat;
   animation: move-bg 30s infinite linear;
 }
-
 @keyframes move-bg {
   0% {
     background-position: 0px 0px;
@@ -39,6 +64,18 @@
   100% {
     background-position: -1977px -1448px;
   }
+}
+#username h1{
+  font-family: 'gamer', sans-serif;
+  font-size: 100px;
+  -webkit-text-fill-color: #f2a516;
+  padding: 20px;
+  text-align: center;
+}
+#username h3{
+  color: #d95204;
+  font-family: 'gamer', sans-serif;
+  font-size: 40px;
 }
 
 #username form {
@@ -53,41 +90,53 @@
   height: 8vh;
   width: 30vw;
   margin: 2vh;
-  background-color: #fecea8;
-  border: 1px solid #2a363b;
+  border: 15px solid #d95204;
+  background-color: #F2A516;
+  font-family: 'gamer', sans-serif;
+  font-size: 40px;
+  color: white;
+  padding: 20px;
 }
 
 #username button {
-  height: 8vh;
   width: 30vw;
-  background-color: #fecea8;
-  border: 1px solid #2a363b;
-  font-size: larger;
+  background-color: #fecea800;
+  border: 1px solid #2a363b00;
   cursor: pointer;
+  font-family: 'gamer', sans-serif;
+  color: #f2a516;
+  font-size: 150px;
+  -webkit-text-stroke: 6px #D95204;
 }
 
 #startgame {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
 }
 
 #startgame button {
-  font-size: xx-large;
   margin-left: 3vw;
   margin-right: 3vw;
-  color: #2a363b;
-  height: 20vh;
-  width: 20vw;
+  width: 50vw;
+  background-color: #011133;
+  border: 15px solid #f2a516;
+  cursor: pointer;
+  font-family: 'gamer', sans-serif;
+  color: #f2a516;
+  font-size: 150px;
+  -webkit-text-stroke: 6px #D95204;
+  padding: 10px 10px 30px 10px;
 }
-
 .container-counters {
-  height: 5vh;
+  display: flex;
+  justify-content: space-around;
+  height: 20vh;
   width: 81vw;
-  background-color: #fecea8;
+  background-color: #011133;
+  border: 15px solid #f2a516;
 }
-
 .container-play-btn {
   height: 91vh;
   width: 81vw;
@@ -95,11 +144,46 @@
   align-items: center;
   justify-content: center;
 }
-
+.countdown, #click-counter{
+  color: #f2a516;
+  font-family: 'gamer', sans-serif;
+  font-size: 150px;
+}
 .container-play-btn div {
   height: 10vh;
   width: 10vw;
   background-image: url("assets/retro_rocket_vector.png");
   background-size: contain;
   background-repeat: no-repeat;
+}
+#score h1{
+  font-family: 'gamer', sans-serif;
+  font-size: 150px;
+  -webkit-text-fill-color: #f2a516;
+  padding: 20px;
+  text-align: center;
+}
+#score h3{
+  font-family: 'gamer', sans-serif;
+  font-size: 100px;
+  -webkit-text-fill-color: #d95204;
+  padding: 20px;
+  text-align: center;
+}
+#score p{
+  color: #f2a516;
+  font-family: 'gamer', sans-serif;
+  font-size: 40px;
+  padding: 10px;
+}
+.playAgain{
+  width: 30vw;
+  background-color: #fecea800;
+  border: 1px solid #2a363b00;
+  cursor: pointer;
+  font-family: 'gamer', sans-serif;
+  color: #f2a516;
+  font-size: 150px;
+  -webkit-text-stroke: 6px #D95204;
+  line-height: 0.6em;
 }
