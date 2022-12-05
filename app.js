@@ -43,3 +43,4 @@ function playAgain() {
   countDown.innerHTML = "";
   clickCounter.innerText = "";
 }
+
