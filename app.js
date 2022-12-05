@@ -74,11 +74,11 @@ function getUserAndScore() {
 
 function moveButton() {
   let button = document.getElementById("click-here-btn");
-  let left = Math.floor(Math.random() * 500);
-  let top = Math.floor(Math.random() * 500);
+  let left = Math.floor(Math.random() * 70);
+  let top = Math.floor(Math.random() * 70);
   let size = Math.floor(Math.random() * 50);
   button.style.position = "absolute";
-  button.style.left = left + "px";
-  button.style.top = top + "px";
+  button.style.left = left + "vw";
+  button.style.top = top + "vh";
   button.style.padding = size + "px";
 }
