@@ -144,7 +144,7 @@
   align-items: center;
   justify-content: center;
 }
-.countdown, #click-counter{
+.countdown, .click-counter{
   color: #f2a516;
   font-family: 'gamer', sans-serif;
   font-size: 150px;
