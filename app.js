@@ -21,6 +21,7 @@ function updateClock() {
   countDown.innerHTML = countdownTotal;
   if (countdownTotal == 0) {
     gameover = true;
+    modRanking()
   } else {
     countdownTotal -= 1;
     setTimeout("updateClock()", 1000);
@@ -48,7 +49,7 @@ function playAgain() {
 // función para coger el nombre y la puntuación de localstorage
 
 function getUserAndScore() {
-    players = [];
+    let players = [];
     for(let i = localStorage.length; i > localStorage.length - 5; i--) {
         let playerName = JSON.parse(localStorage.getItem(i))
         players.push(playerName)
@@ -80,3 +81,16 @@ function moveButton() {
   button.style.top = top + "px";
   button.style.padding = size + "px";
 }
+
+//funcion para actualizar las puntuaciones al pulsar el boton de volver a jugar
+
+
+function modRanking() {
+player = {
+  ...player,
+  score: counter + " clicks"
+}
+localStorage.setItem(localStorage.length, JSON.stringify(player))
+}
+
+
