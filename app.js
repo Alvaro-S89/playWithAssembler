@@ -68,3 +68,15 @@ function getUserAndScore() {
         }
 }
 
+// funcion para mover boton de posicion
+
+function moveButton() {
+  let button = document.getElementById("click-here-btn");
+  let left = Math.floor(Math.random() * 500);
+  let top = Math.floor(Math.random() * 500);
+  let size = Math.floor(Math.random() * 50);
+  button.style.position = "absolute";
+  button.style.left = left + "px";
+  button.style.top = top + "px";
+  button.style.padding = size + "px";
+}
