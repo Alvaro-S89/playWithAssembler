@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fecea8;
+}
+
+#ranking {
+  width: 15vw;
+  height: 96vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #011133;
+  margin: 2vh 1vw 2vh 1vw;
+}
+
+#username,
+#startgame,
+#play,
+#score {
+  width: 81vw;
+  height: 96vh;
+  margin: 2vh 0vw 2vh 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url("assets/stars_texture2957.jpg");
+  background-position: 0px 0px;
+  background-repeat: repeat;
+  animation: move-bg 30s infinite linear;
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -1977px -1448px;
+  }
+}
+
+#username form {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#username input {
+  height: 8vh;
+  width: 30vw;
+  margin: 2vh;
+  background-color: #fecea8;
+  border: 1px solid #2a363b;
+}
+
+#username button {
+  height: 8vh;
+  width: 30vw;
+  background-color: #fecea8;
+  border: 1px solid #2a363b;
+  font-size: larger;
+  cursor: pointer;
+}
+
+#startgame {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#startgame button {
+  font-size: xx-large;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  color: #2a363b;
+  height: 20vh;
+  width: 20vw;
+}
+
+.container-counters {
+  height: 5vh;
+  width: 81vw;
+  background-color: #fecea8;
+}
+
+.container-play-btn {
+  height: 91vh;
+  width: 81vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-play-btn div {
+  height: 10vh;
+  width: 10vw;
+  background-image: url("assets/retro_rocket_vector.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}

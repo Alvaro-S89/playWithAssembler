@@ -9,19 +9,27 @@
   </head>
   <body>
     <section id="username">
+      <h1>CLICK IN 10 SECONDS GAME</h1>
       <form>
-        <title>chose a user name</title>
-        <label for="user-name">User name</label>
+        <h3>Enter your username:</h3>
+        <!-- <title>Chose a user name:</title> -->
+        <!-- <label for="user-name">Username</label> -->
         <input type="text" id="user-name" />
-        <button type="submit">Start</button>
+        <button type="submit">Next</button>
       </form>
     </section>
     <section id="startgame">
-      <button class="btn-startGame">Start game</button>
+      <button class="btn-startGame">EASY</button>
+      <button>HARD</button>
     </section>
     <section id="play">
-      <div class="countdown"></div>
-      <button class="btn-clickHere" id="click-here-btn">Click here!</button>
+      <div class="container-counters">
+        <div class="countdown"></div>
+        <div id="click-counter"></div>
+      </div>
+      <div class="container-play-btn">
+        <div class="btn-clickHere" id="click-here-btn"></div>
+      </div>
     </section>
     <section id="score">
       <h1>Your score!</h1>
