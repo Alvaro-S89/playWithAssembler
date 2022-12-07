@@ -151,7 +151,7 @@
 }
 .container-play-btn div {
   height: 10vh;
-  width: 10vw;
+  width: 90px;
   background-image: url("assets/retro_rocket_vector.png");
   background-size: contain;
   background-repeat: no-repeat;

@@ -77,7 +77,7 @@ function moveButton() {
   let button = document.getElementById("click-here-btn");
   let left = Math.floor(Math.random() * 70);
   let top = Math.floor(Math.random() * 70);
-  let size = Math.floor(Math.random() * 50);
+  let size = Math.floor(Math.random() * 150);
   button.style.position = "absolute";
   button.style.left = left + "vw";
   button.style.top = top + "vh";
