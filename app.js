@@ -37,6 +37,7 @@ function playAgain() {
   player = {
     name: "",
     score: "Currently Playing",
+    level: "",
   };
 
   keyPlayer = Number(localStorage.length);
@@ -49,6 +50,7 @@ function playAgain() {
   for (let element of clickCounterElements) {
     element.innerText = "";
   }
+  buttonClick.style.cssText = "position: relative; left: 0; top: 0; padding: 0";
 }
 
 // función para coger el nombre y la puntuación de localstorage
@@ -76,7 +78,7 @@ function getUserAndScore() {
 
 // funcion para mover boton de posicion
 
-function moveButton() {
+  function moveButton() {
   let button = document.getElementById("click-here-btn");
   let left = Math.floor(Math.random() * 70);
   let top = Math.floor(Math.random() * 70);
@@ -115,4 +117,30 @@ const nextPage= (visiblePage)=> {
 
 
 const redirectHome= ()=> nextPage('username')
+
+
+//Funciones para meter en el objeto el nivel al que se juega
+
+
+function startEasyGame() {
+  player = {
+    ...player,
+    level: "Easy"
+  }
+  localStorage.setItem(localStorage.length, JSON.stringify(player))
+buttonClick.removeEventListener("click", moveButton)
+  updateClock()
+}
+
+function startHardGame() {
+  player = {
+    ...player,
+    level: "Hard"
+  }
+  localStorage.setItem(localStorage.length, JSON.stringify(player))
+  
+  buttonClick.addEventListener("click", moveButton);
+  updateClock()
+}
+
 
