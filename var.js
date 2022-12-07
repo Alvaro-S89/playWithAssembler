@@ -25,7 +25,8 @@ let countdownTotal = 10;
 const playAgainBtn = document.querySelector(".playAgain");
 // Variables ranking
 
-let infoRanking = document.querySelector(".infoRanking")
+let infoRanking = document.querySelector(".infoRanking");
+let topThree = document.querySelector(".topThree");
 
 // Escuchadore de eventos
 btnstartGame.addEventListener("click", updateClock);
@@ -35,6 +36,7 @@ playAgainBtn.addEventListener("click", playAgain);
 buttonClick.addEventListener("click",moveButton);
 
 //Listener carga de pagina
-window.addEventListener("load", getUserAndScore)
+window.addEventListener("load", getUserAndScore);
+window.addEventListener("load", threePlayer);
 
 
