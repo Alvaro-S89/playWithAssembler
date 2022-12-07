@@ -45,7 +45,9 @@ function playAgain() {
 
   userNameInput.value = "";
   countDown.innerHTML = "";
-  clickCounter.innerText = "";
+  for (let element of clickCounterElements) {
+    element.innerText = "";
+  }
 }
 
 // función para coger el nombre y la puntuación de localstorage
@@ -68,6 +70,7 @@ function getUserAndScore() {
       infoRanking.appendChild(h4);
     }
   }
+<<<<<<< HEAD
 }
 
 // funcion para sacar los tres mejores jugadores
@@ -99,6 +102,8 @@ function threePlayer() {
     }
   }
 
+=======
+>>>>>>> 0b6150910f26a9bf7b3c28b845c4bfb844be8f3a
 }
 
 // funcion para mover boton de posicion
@@ -114,10 +119,18 @@ function moveButton() {
 }
 
 //funcion para actualizar las puntuaciones al pulsar el boton de volver a jugar
+<<<<<<< HEAD
 function modRanking() {
   player = {
     ...player,
     score: counter,
+=======
+
+function modRanking() {
+  player = {
+    ...player,
+    score: counter + " clicks",
+>>>>>>> 0b6150910f26a9bf7b3c28b845c4bfb844be8f3a
   };
   localStorage.setItem(localStorage.length, JSON.stringify(player));
 }

@@ -6,11 +6,11 @@
 @font-face {
   font-family: "gamer";
   src: url("assets/fonts/gamer.ttf") format("ttf"),
-       url("assets/fonts/gamer.woff2") format("woff2"), 
-       url("assets/fonts/gamer.woff") format("woff"),
-       url("assets/fonts/gamer.eot") format("eot"),
-       url("assets/fonts/gamer.otf") format("otf"),
-       url("assets/fonts/gamer.svg") format("svg");
+    url("assets/fonts/gamer.woff2") format("woff2"),
+    url("assets/fonts/gamer.woff") format("woff"),
+    url("assets/fonts/gamer.eot") format("eot"),
+    url("assets/fonts/gamer.otf") format("otf"),
+    url("assets/fonts/gamer.svg") format("svg");
 }
 
 #ranking {
@@ -22,21 +22,21 @@
   background-color: #011133;
   margin: 2vh 1vw 2vh 1vw;
 }
-#ranking h2{
-  font-family: 'gamer', sans-serif;
+#ranking h2 {
+  font-family: "gamer", sans-serif;
   font-size: 50px;
   -webkit-text-fill-color: #d95204;
   padding: 20px;
 }
-.infoRanking h3{
+.infoRanking h3 {
   color: #f2a516;
-  font-family: 'gamer', sans-serif;
+  font-family: "gamer", sans-serif;
   font-size: 40px;
   padding: 10px;
 }
-.infoRanking h4{
+.infoRanking h4 {
   color: #d95204;
-  font-family: 'gamer', sans-serif;
+  font-family: "gamer", sans-serif;
   font-size: 30px;
   padding: 10px;
 }
@@ -65,16 +65,16 @@
     background-position: -1977px -1448px;
   }
 }
-#username h1{
-  font-family: 'gamer', sans-serif;
+#username h1 {
+  font-family: "gamer", sans-serif;
   font-size: 100px;
   -webkit-text-fill-color: #f2a516;
   padding: 20px;
   text-align: center;
 }
-#username h3{
+#username h3 {
   color: #d95204;
-  font-family: 'gamer', sans-serif;
+  font-family: "gamer", sans-serif;
   font-size: 40px;
 }
 
@@ -91,8 +91,8 @@
   width: 30vw;
   margin: 2vh;
   border: 15px solid #d95204;
-  background-color: #F2A516;
-  font-family: 'gamer', sans-serif;
+  background-color: #f2a516;
+  font-family: "gamer", sans-serif;
   font-size: 40px;
   color: white;
   padding: 20px;
@@ -103,17 +103,17 @@
   background-color: #fecea800;
   border: 1px solid #2a363b00;
   cursor: pointer;
-  font-family: 'gamer', sans-serif;
+  font-family: "gamer", sans-serif;
   color: #f2a516;
   font-size: 150px;
-  -webkit-text-stroke: 6px #D95204;
+  -webkit-text-stroke: 6px #d95204;
 }
 
 #startgame {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 
 #startgame button {
@@ -123,10 +123,10 @@
   background-color: #011133;
   border: 15px solid #f2a516;
   cursor: pointer;
-  font-family: 'gamer', sans-serif;
+  font-family: "gamer", sans-serif;
   color: #f2a516;
   font-size: 150px;
-  -webkit-text-stroke: 6px #D95204;
+  -webkit-text-stroke: 6px #d95204;
   padding: 10px 10px 30px 10px;
 }
 .container-counters {
@@ -144,9 +144,10 @@
   align-items: center;
   justify-content: center;
 }
-.countdown, .click-counter{
+.countdown,
+.click-counter {
   color: #f2a516;
-  font-family: 'gamer', sans-serif;
+  font-family: "gamer", sans-serif;
   font-size: 150px;
 }
 .container-play-btn div {
@@ -157,34 +158,120 @@
   background-repeat: no-repeat;
   transform: rotate(55deg);
 }
-#score h1{
-  font-family: 'gamer', sans-serif;
+#score h1 {
+  font-family: "gamer", sans-serif;
   font-size: 150px;
   -webkit-text-fill-color: #f2a516;
   padding: 20px;
   text-align: center;
 }
-#score h3{
-  font-family: 'gamer', sans-serif;
+#score h3 {
+  font-family: "gamer", sans-serif;
   font-size: 100px;
   -webkit-text-fill-color: #d95204;
   padding: 20px;
   text-align: center;
 }
-#score p{
+#score p {
   color: #f2a516;
-  font-family: 'gamer', sans-serif;
+  font-family: "gamer", sans-serif;
   font-size: 40px;
   padding: 10px;
 }
-.playAgain{
+.playAgain {
   width: 30vw;
   background-color: #fecea800;
   border: 1px solid #2a363b00;
   cursor: pointer;
-  font-family: 'gamer', sans-serif;
+  font-family: "gamer", sans-serif;
   color: lightyellow;
   font-size: 150px;
-  -webkit-text-stroke: 6px #D95204;
+  -webkit-text-stroke: 6px #d95204;
   line-height: 0.6em;
+}
+
+@media screen and (max-width: 1500px) {
+  #score h1 {
+    font-size: 140px;
+    padding: 0px;
+  }
+  #score h3 {
+    font-size: 80px;
+    padding: 0px;
+  }
+  #score p {
+    padding: 5px;
+  }
+  .playAgain {
+    width: 25vw;
+    font-size: 130px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #username h1 {
+    font-size: 90px;
+    padding: 20px;
+  }
+
+  #username form {
+    height: 30vh;
+  }
+
+  #username input {
+    height: 7vh;
+    border: 14px solid #d95204;
+    font-size: 35px;
+  }
+
+  #username button {
+    width: 25vw;
+    font-size: 130px;
+    -webkit-text-stroke: 4px #d95204;
+  }
+  #startgame {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  #username h1 {
+    font-size: 80px;
+  }
+  #username button {
+    font-size: 120px;
+  }
+  #score h1 {
+    font-size: 120px;
+  }
+  #score h3 {
+    font-size: 50px;
+    margin-block: 0px;
+    display: inline-flex;
+  }
+
+  .playAgain {
+    font-size: 120px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #ranking {
+    width: 98vw;
+    height: 50vh;
+    position: relative;
+    margin: 2vh 1vw 2vh 1vw;
+  }
+
+  #username,
+  #startgame,
+  #play,
+  #score {
+    width: 98vw;
+  }
+
+  #username h1 {
+    font-size: 50px;
+  }
 }

@@ -26,17 +26,23 @@ const playAgainBtn = document.querySelector(".playAgain");
 // Variables ranking
 
 let infoRanking = document.querySelector(".infoRanking");
+<<<<<<< HEAD
 let topThree = document.querySelector(".topThree");
+=======
+>>>>>>> 0b6150910f26a9bf7b3c28b845c4bfb844be8f3a
 
 // Escuchadore de eventos
 btnstartGame.addEventListener("click", updateClock);
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
 playAgainBtn.addEventListener("click", playAgain);
-buttonClick.addEventListener("click",moveButton);
+buttonClick.addEventListener("click", moveButton);
 
 //Listener carga de pagina
 window.addEventListener("load", getUserAndScore);
+<<<<<<< HEAD
 window.addEventListener("load", threePlayer);
 
 
+=======
+>>>>>>> 0b6150910f26a9bf7b3c28b845c4bfb844be8f3a
