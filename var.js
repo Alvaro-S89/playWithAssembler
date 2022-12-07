@@ -5,6 +5,7 @@ const userNameBtn = document.querySelector("#username button");
 let player = {
   name: "",
   score: "Currently Playing",
+  level: "",
 };
 
 let keyPlayer = Number(localStorage.length);
@@ -16,7 +17,7 @@ let counter = 0;
 let gameover = false;
 
 // variables cuenta atrás
-let btnstartGame = document.querySelector(".btn-startGame");
+
 const countDown = document.querySelector(".countdown");
 let countdownTotal = 10;
 
@@ -26,23 +27,23 @@ const playAgainBtn = document.querySelector(".playAgain");
 // Variables ranking
 
 let infoRanking = document.querySelector(".infoRanking");
-<<<<<<< HEAD
 let topThree = document.querySelector(".topThree");
-=======
->>>>>>> 0b6150910f26a9bf7b3c28b845c4bfb844be8f3a
+
+// Variables escoger modo
+let btnEasyGame = document.querySelector(".btnEasyGame")
+let btnHardGame = document.querySelector(".btnHardGame")
 
 // Escuchadore de eventos
-btnstartGame.addEventListener("click", updateClock);
+
+
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
 playAgainBtn.addEventListener("click", playAgain);
-buttonClick.addEventListener("click", moveButton);
+btnEasyGame.addEventListener("click", startEasyGame);
+btnHardGame.addEventListener("click", startHardGame);
 
 //Listener carga de pagina
 window.addEventListener("load", getUserAndScore);
-<<<<<<< HEAD
 window.addEventListener("load", threePlayer);
 
 
-=======
->>>>>>> 0b6150910f26a9bf7b3c28b845c4bfb844be8f3a

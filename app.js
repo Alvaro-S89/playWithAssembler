@@ -36,6 +36,7 @@ function playAgain() {
   player = {
     name: "",
     score: "Currently Playing",
+    level: "",
   };
 
   keyPlayer = Number(localStorage.length);
@@ -48,6 +49,7 @@ function playAgain() {
   for (let element of clickCounterElements) {
     element.innerText = "";
   }
+  buttonClick.style.cssText = "position: relative; left: 0; top: 0; padding: 0";
 }
 
 // función para coger el nombre y la puntuación de localstorage
@@ -70,7 +72,6 @@ function getUserAndScore() {
       infoRanking.appendChild(h4);
     }
   }
-<<<<<<< HEAD
 }
 
 // funcion para sacar los tres mejores jugadores
@@ -102,12 +103,11 @@ function threePlayer() {
     }
   }
 
-=======
->>>>>>> 0b6150910f26a9bf7b3c28b845c4bfb844be8f3a
 }
 
 // funcion para mover boton de posicion
-function moveButton() {
+
+  function moveButton() {
   let button = document.getElementById("click-here-btn");
   let left = Math.floor(Math.random() * 70);
   let top = Math.floor(Math.random() * 70);
@@ -119,18 +119,37 @@ function moveButton() {
 }
 
 //funcion para actualizar las puntuaciones al pulsar el boton de volver a jugar
-<<<<<<< HEAD
 function modRanking() {
   player = {
     ...player,
     score: counter,
-=======
-
-function modRanking() {
-  player = {
-    ...player,
-    score: counter + " clicks",
->>>>>>> 0b6150910f26a9bf7b3c28b845c4bfb844be8f3a
   };
   localStorage.setItem(localStorage.length, JSON.stringify(player));
 }
+
+
+//Funciones para meter en el objeto el nivel al que se juega
+
+
+function startEasyGame() {
+  player = {
+    ...player,
+    level: "Easy"
+  }
+  localStorage.setItem(localStorage.length, JSON.stringify(player))
+buttonClick.removeEventListener("click", moveButton)
+  updateClock()
+}
+
+function startHardGame() {
+  player = {
+    ...player,
+    level: "Hard"
+  }
+  localStorage.setItem(localStorage.length, JSON.stringify(player))
+  
+  buttonClick.addEventListener("click", moveButton);
+  updateClock()
+}
+
+
