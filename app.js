@@ -23,6 +23,7 @@ function updateClock() {
   countDown.innerHTML = countdownTotal;
   if (countdownTotal == 0) {
     gameover = true;
+    nextPage('score')
     modRanking();
   } else {
     countdownTotal -= 1;
@@ -95,3 +96,23 @@ function modRanking() {
   };
   localStorage.setItem(localStorage.length, JSON.stringify(player));
 }
+
+//function to scroll pages
+const nextBtn= document.getElementById('next-btn');
+const pages= document.querySelectorAll('section');
+for(const page of pages){
+   if(!page.classList.contains('username')) page.classList.add('non-visible')
+}
+const nextPage= (visiblePage)=> {
+    for(const page of pages){
+   if(!page.classList.contains(visiblePage)) page.classList.add('non-visible')
+   else page.classList.remove('non-visible')
+}
+  }
+  nextBtn.addEventListener('click', () => nextPage('startgame'));
+ 
+ const navigateToPlay =  () => nextPage('play')
+
+
+const redirectHome= ()=> nextPage('username')
+

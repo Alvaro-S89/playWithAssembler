@@ -1,6 +1,6 @@
 // variablesUN
 const userNameInput = document.getElementById("user-name");
-const userNameBtn = document.querySelector("#username button");
+const userNameBtn = document.querySelector(".username button");
 
 let player = {
   name: "",
@@ -16,7 +16,7 @@ let counter = 0;
 let gameover = false;
 
 // variables cuenta atrás
-let btnstartGame = document.querySelector(".btn-startGame");
+let btnEasyGame = document.querySelector(".btnEasyGame");
 const countDown = document.querySelector(".countdown");
 let countdownTotal = 10;
 
@@ -28,11 +28,25 @@ const playAgainBtn = document.querySelector(".playAgain");
 let infoRanking = document.querySelector(".infoRanking");
 
 // Escuchadore de eventos
-btnstartGame.addEventListener("click", updateClock);
+btnEasyGame.addEventListener("click", updateClock);
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
 playAgainBtn.addEventListener("click", playAgain);
+playAgainBtn.addEventListener("click", redirectHome);
 buttonClick.addEventListener("click", moveButton);
 
 //Listener carga de pagina
 window.addEventListener("load", getUserAndScore);
+
+//Listenerscrollpages
+
+
+
+//pages/sections
+
+
+const btnHardGame= document.querySelector('.btnHardGame');
+
+btnEasyGame.addEventListener('click', navigateToPlay);
+btnHardGame.addEventListener('click', navigateToPlay);
+

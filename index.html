@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
-    <section id="username">
+    <section class="username">
       <h1>CLICK IN 10 SECONDS GAME</h1>
       <form>
         <h3>ENTER YOUR USERNAME:</h3>
-        <!-- <title>Chose a user name:</title> -->
-        <!-- <label for="user-name">Username</label> -->
         <input type="text" id="user-name" />
-        <button type="submit">NEXT</button>
+        <button id="next-btn" type="submit">NEXT</button>
       </form>
     </section>
-    <section id="startgame">
-      <button class="btn-startGame">EASY</button>
-      <button>HARD</button>
+    <section class="startgame">
+      <button class="btnEasyGame">EASY</button>
+      <button class="btnHardGame">HARD</button>
     </section>
-    <section id="play">
+    <section class="play">
       <div class="container-counters">
         <div class="countdown"></div>
         <div class="click-counter"></div>
@@ -31,13 +29,13 @@
         <div class="btn-clickHere" id="click-here-btn"></div>
       </div>
     </section>
-    <section id="score">
+    <section class="score">
       <h1>YOUR SCORE!</h1>
       <p>YOUR 10 SECONDS ARE DONE</p>
       <h3>YOU HAVE MADE <span class="click-counter"></span> CLICKS</h3>
       <button class="playAgain">play again</button>
     </section>
-    <section id="ranking">
+    <section class="ranking">
       <h2>User Scores</h2>
       <div class="infoRanking"></div>
     </section>
