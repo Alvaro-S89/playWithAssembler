@@ -23,8 +23,9 @@ function updateClock() {
   countDown.innerHTML = countdownTotal;
   if (countdownTotal == 0) {
     gameover = true;
-    nextPage('score')
+    nextPage("score");
     modRanking();
+    getUserAndScore();
   } else {
     countdownTotal -= 1;
     setTimeout("updateClock()", 1000);
@@ -78,7 +79,7 @@ function getUserAndScore() {
 
 // funcion para mover boton de posicion
 
-  function moveButton() {
+function moveButton() {
   let button = document.getElementById("click-here-btn");
   let left = Math.floor(Math.random() * 70);
   let top = Math.floor(Math.random() * 70);
@@ -94,53 +95,50 @@ function getUserAndScore() {
 function modRanking() {
   player = {
     ...player,
-    score: counter + " clicks",
+    score: counter,
   };
   localStorage.setItem(localStorage.length, JSON.stringify(player));
 }
 
 //function to scroll pages
-const nextBtn= document.getElementById('next-btn');
-const pages= document.querySelectorAll('section');
-for(const page of pages){
-   if(!page.classList.contains('username')) page.classList.add('non-visible')
+const nextBtn = document.getElementById("next-btn");
+const pages = document.querySelectorAll("section");
+for (let i = 0; i < pages.length - 1; i++) {
+  if (!pages[i].classList.contains("username"))
+    pages[i].classList.add("non-visible");
 }
-const nextPage= (visiblePage)=> {
-    for(const page of pages){
-   if(!page.classList.contains(visiblePage)) page.classList.add('non-visible')
-   else page.classList.remove('non-visible')
-}
+const nextPage = (visiblePage) => {
+  for (let i = 0; i < pages.length - 1; i++) {
+    if (!pages[i].classList.contains(visiblePage))
+      pages[i].classList.add("non-visible");
+    else pages[i].classList.remove("non-visible");
   }
-  nextBtn.addEventListener('click', () => nextPage('startgame'));
- 
- const navigateToPlay =  () => nextPage('play')
+};
+nextBtn.addEventListener("click", () => nextPage("startgame"));
 
+const navigateToPlay = () => nextPage("play");
 
-const redirectHome= ()=> nextPage('username')
-
+const redirectHome = () => nextPage("username");
 
 //Funciones para meter en el objeto el nivel al que se juega
-
 
 function startEasyGame() {
   player = {
     ...player,
-    level: "Easy"
-  }
-  localStorage.setItem(localStorage.length, JSON.stringify(player))
-buttonClick.removeEventListener("click", moveButton)
-  updateClock()
+    level: "Easy",
+  };
+  localStorage.setItem(localStorage.length, JSON.stringify(player));
+  buttonClick.removeEventListener("click", moveButton);
+  updateClock();
 }
 
 function startHardGame() {
   player = {
     ...player,
-    level: "Hard"
-  }
-  localStorage.setItem(localStorage.length, JSON.stringify(player))
-  
+    level: "Hard",
+  };
+  localStorage.setItem(localStorage.length, JSON.stringify(player));
+
   buttonClick.addEventListener("click", moveButton);
-  updateClock()
+  updateClock();
 }
-
-
