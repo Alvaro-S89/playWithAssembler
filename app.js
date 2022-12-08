@@ -108,9 +108,6 @@ function threePlayer() {
     return objUser.level === "Easy";
   });
 
-  console.log(topPlayersHard);
-  console.log(topPlayersEasy);
-
   for (let i = 0; i < 3; i++) {
     console.log(topPlayersEasy[i]);
     if (topPlayersEasy[i] != undefined) {
