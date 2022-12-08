@@ -57,20 +57,21 @@ function playAgain() {
 // función para coger el nombre y la puntuación de localstorage
 function getUserAndScore() {
   let players = [];
-  for (let i = localStorage.length; i > localStorage.length - 5; i--) {
+  for (let i = localStorage.length; i > localStorage.length - 3; i--) {
     let playerName = JSON.parse(localStorage.getItem(i));
     players.push(playerName);
   }
   while (infoRanking.firstChild) {
     infoRanking.removeChild(infoRanking.firstChild);
   }
+
   for (let i = 0; i < players.length; i++) {
     if (players[i] != null) {
       let h3 = document.createElement("h3");
       h3.innerHTML = players[i].name;
       infoRanking.appendChild(h3);
       let h5 = document.createElement("h4");
-      h5.classList.add('mode');
+      h5.classList.add("mode");
       h5.innerHTML = players[i].level;
       infoRanking.appendChild(h5);
       let h4 = document.createElement("h4");
@@ -84,30 +85,35 @@ function getUserAndScore() {
 function threePlayer() {
   let topPlayers = [];
 
-  for (let i = 1; i<= localStorage.length; i++) {
-    let playerName = JSON.parse(localStorage.getItem(i));
-    topPlayers.push(playerName);
-  }
-
-  topPlayers.sort((a,b) => b.score - a.score);
-  console.log(topPlayers);
-
-  let topPlayersHard = topPlayers.filter(function(objUser) {
-    return objUser.level === "Hard"
-  });
-
-  let topPlayersEasy = topPlayers.filter(function(objUser) {
-    return objUser.level === "Easy"
-  });
-
-  console.log(topPlayersHard);
-
   while (topThree.firstChild) {
     topThree.removeChild(topThree.firstChild);
   }
 
+  while (topThreeHard.firstChild) {
+    topThreeHard.removeChild(topThreeHard.firstChild);
+  }
+  for (let i = 1; i <= localStorage.length; i++) {
+    let playerName = JSON.parse(localStorage.getItem(i));
+    topPlayers.push(playerName);
+  }
+
+  topPlayers.sort((a, b) => b.score - a.score);
+  console.log(topPlayers);
+
+  let topPlayersHard = topPlayers.filter(function (objUser) {
+    return objUser.level === "Hard";
+  });
+
+  let topPlayersEasy = topPlayers.filter(function (objUser) {
+    return objUser.level === "Easy";
+  });
+
+  console.log(topPlayersHard);
+  console.log(topPlayersEasy);
+
   for (let i = 0; i < 3; i++) {
-    if (topPlayersEasy[i] != null) {
+    console.log(topPlayersEasy[i]);
+    if (topPlayersEasy[i] != undefined) {
       let h3 = document.createElement("h3");
       h3.innerHTML = topPlayersEasy[i].name;
       topThree.appendChild(h3);
@@ -115,9 +121,9 @@ function threePlayer() {
       h4.innerHTML = topPlayersEasy[i].score + " clicks";
       topThree.appendChild(h4);
     }
-  } 
+  }
   for (let i = 0; i < 3; i++) {
-    if (topPlayersHard[i] != null) {
+    if (topPlayersHard[i] != undefined) {
       let h3 = document.createElement("h3");
       h3.innerHTML = topPlayersHard[i].name;
       topThreeHard.appendChild(h3);
@@ -126,9 +132,7 @@ function threePlayer() {
       topThreeHard.appendChild(h4);
     }
   }
-
 }
-
 
 // funcion para mover boton de posicion
 function moveButton() {
@@ -178,7 +182,6 @@ function startEasyGame() {
   };
   localStorage.setItem(localStorage.length, JSON.stringify(player));
   buttonClick.removeEventListener("click", moveButton);
-
 }
 
 function startHardGame() {

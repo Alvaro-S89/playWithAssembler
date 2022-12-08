@@ -41,6 +41,7 @@ buttonClick.addEventListener("click", moveButton);
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
 playAgainBtn.addEventListener("click", playAgain);
+playAgainBtn.addEventListener("click", threePlayer);
 btnEasyGame.addEventListener("click", startEasyGame);
 btnHardGame.addEventListener("click", startHardGame);
 

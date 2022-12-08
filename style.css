@@ -14,13 +14,13 @@
 }
 
 #ranking {
-  width: 15vw;
-  height: 96vh;
+  width: 16vw;
+  min-height: 96vh;
   position: fixed;
   top: 0;
   right: 0;
   background-color: #011133;
-  margin: 2vh 1vw 2vh 1vw;
+  margin: 2vh 1vw 2vh 0vw;
 }
 #ranking h2 {
   font-family: "gamer", sans-serif;
@@ -42,32 +42,34 @@
   padding: 0px 20px;
   font-weight: 100;
 }
-.topThree h3, .topThreeHard h3{
+.topThree h3,
+.topThreeHard h3 {
   color: #f2a516;
   font-family: "gamer", sans-serif;
   font-size: 40px;
   padding: 0px 20px;
   text-transform: uppercase;
 }
-.topThree h4, .topThreeHard h4{
+.topThree h4,
+.topThreeHard h4 {
   color: lightsteelblue;
   font-family: "gamer", sans-serif;
   font-size: 30px;
   padding: 5px 20px;
   font-weight: 100;
 }
-summary{
+summary {
   font-family: "gamer", sans-serif;
   font-size: 30px;
   -webkit-text-fill-color: #d95204;
   padding: 20px;
   cursor: pointer;
 }
-::marker{
-  color:#f2a516;
+::marker {
+  color: #f2a516;
   font-size: 20px;
 }
-.mode{
+.mode {
   color: lightyellow !important;
   text-transform: uppercase;
   font-weight: 100;
@@ -236,6 +238,29 @@ summary{
   .playAgain {
     width: 25vw;
     font-size: 130px;
+  }
+
+  #ranking h2 {
+    font-size: 35px;
+    padding-bottom: 3px;
+  }
+
+  #ranking h3 {
+    font-size: 30px;
+    font-weight: 100;
+  }
+
+  .mode {
+    font-size: 25px !important;
+  }
+
+  summary {
+    font-size: 27px;
+  }
+
+  .countdown,
+  .click-counter {
+    font-size: 100px;
   }
 }
 
