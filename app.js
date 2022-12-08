@@ -70,8 +70,11 @@ function getUserAndScore() {
       let h3 = document.createElement("h3");
       h3.innerHTML = players[i].name;
       infoRanking.appendChild(h3);
+      let h5 = document.createElement("h4");
+      h5.innerHTML = players[i].level;
+      infoRanking.appendChild(h5);
       let h4 = document.createElement("h4");
-      h4.innerHTML = players[i].score;
+      h4.innerHTML = players[i].score + " clicks";
       infoRanking.appendChild(h4);
     }
   }
@@ -129,7 +132,6 @@ function startEasyGame() {
   };
   localStorage.setItem(localStorage.length, JSON.stringify(player));
   buttonClick.removeEventListener("click", moveButton);
-  updateClock();
 }
 
 function startHardGame() {
