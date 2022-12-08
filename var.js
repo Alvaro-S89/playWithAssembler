@@ -21,11 +21,12 @@ const countDown = document.querySelector(".countdown");
 let countdownTotal = 10;
 
 //variables playAgain
-
 const playAgainBtn = document.querySelector(".playAgain");
 // Variables ranking
+
 let infoRanking = document.querySelector(".infoRanking");
 let topThree = document.querySelector(".topThree");
+let topThreeHard = document.querySelector(".topThreeHard");
 
 // Variables escoger modo
 let btnEasyGame = document.querySelector(".btnEasyGame");
@@ -37,7 +38,6 @@ userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
 playAgainBtn.addEventListener("click", playAgain);
 buttonClick.addEventListener("click", moveButton);
-
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
 playAgainBtn.addEventListener("click", playAgain);
@@ -48,8 +48,6 @@ btnHardGame.addEventListener("click", startHardGame);
 playAgainBtn.addEventListener("click", redirectHome);
 window.addEventListener("load", getUserAndScore);
 window.addEventListener("load", threePlayer);
-
-
 
 btnEasyGame.addEventListener("click", navigateToPlay);
 btnHardGame.addEventListener("click", navigateToPlay);

@@ -33,28 +33,32 @@
   font-family: "gamer", sans-serif;
   font-size: 40px;
   padding: 0px 20px;
+  text-transform: uppercase;
 }
 .infoRanking h4 {
-  color: #d95204;
+  color: lightsteelblue;
   font-family: "gamer", sans-serif;
   font-size: 30px;
-  padding: 5px 20px;
+  padding: 0px 20px;
+  font-weight: 100;
 }
-.topThree h3{
+.topThree h3, .topThreeHard h3{
   color: #f2a516;
   font-family: "gamer", sans-serif;
   font-size: 40px;
   padding: 0px 20px;
+  text-transform: uppercase;
 }
-.topThree h4{
-  color: #d95204;
+.topThree h4, .topThreeHard h4{
+  color: lightsteelblue;
   font-family: "gamer", sans-serif;
   font-size: 30px;
   padding: 5px 20px;
+  font-weight: 100;
 }
 summary{
   font-family: "gamer", sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   -webkit-text-fill-color: #d95204;
   padding: 20px;
   cursor: pointer;
@@ -62,6 +66,11 @@ summary{
 ::marker{
   color:#f2a516;
   font-size: 20px;
+}
+.mode{
+  color: lightyellow !important;
+  text-transform: uppercase;
+  font-weight: 100;
 }
 .username,
 .startgame,

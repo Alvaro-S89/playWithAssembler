@@ -70,6 +70,7 @@ function getUserAndScore() {
       h3.innerHTML = players[i].name;
       infoRanking.appendChild(h3);
       let h5 = document.createElement("h4");
+      h5.classList.add('mode');
       h5.innerHTML = players[i].level;
       infoRanking.appendChild(h5);
       let h4 = document.createElement("h4");
@@ -88,30 +89,48 @@ function threePlayer() {
     topPlayers.push(playerName);
   }
 
-
   topPlayers.sort((a,b) => b.score - a.score);
   console.log(topPlayers);
 
+  let topPlayersHard = topPlayers.filter(function(objUser) {
+    return objUser.level === "Hard"
+  });
+
+  let topPlayersEasy = topPlayers.filter(function(objUser) {
+    return objUser.level === "Easy"
+  });
+
+  console.log(topPlayersHard);
 
   while (topThree.firstChild) {
     topThree.removeChild(topThree.firstChild);
   }
 
-  for (let i = 0; i < topPlayers.length; i++) {
-    if (topPlayers[i] != null) {
+  for (let i = 0; i < 3; i++) {
+    if (topPlayersEasy[i] != null) {
       let h3 = document.createElement("h3");
-      h3.innerHTML = topPlayers[i].name;
+      h3.innerHTML = topPlayersEasy[i].name;
       topThree.appendChild(h3);
       let h4 = document.createElement("h4");
-      h4.innerHTML = topPlayers[i].score;
+      h4.innerHTML = topPlayersEasy[i].score + " clicks";
       topThree.appendChild(h4);
+    }
+  } 
+  for (let i = 0; i < 3; i++) {
+    if (topPlayersHard[i] != null) {
+      let h3 = document.createElement("h3");
+      h3.innerHTML = topPlayersHard[i].name;
+      topThreeHard.appendChild(h3);
+      let h4 = document.createElement("h4");
+      h4.innerHTML = topPlayersHard[i].score + " clicks";
+      topThreeHard.appendChild(h4);
     }
   }
 
 }
 
-// funcion para mover boton de posicion
 
+// funcion para mover boton de posicion
 function moveButton() {
   let button = document.getElementById("click-here-btn");
   let left = Math.floor(Math.random() * 70);
@@ -149,11 +168,9 @@ const nextPage = (visiblePage) => {
 nextBtn.addEventListener("click", () => nextPage("startgame"));
 
 const navigateToPlay = () => nextPage("play");
-
 const redirectHome = () => nextPage("username");
 
 //Funciones para meter en el objeto el nivel al que se juega
-
 function startEasyGame() {
   player = {
     ...player,
