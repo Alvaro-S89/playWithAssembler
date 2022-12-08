@@ -206,11 +206,11 @@ summary{
 .score p {
   color: #f2a516;
   font-family: "gamer", sans-serif;
-  font-size: 40px;
+  font-size: 60px;
   padding: 10px;
 }
 .playAgain {
-  width: 30vw;
+  width: 20vw;
   background-color: #fecea800;
   border: 1px solid #2a363b00;
   cursor: pointer;
@@ -279,15 +279,25 @@ summary{
   .score h3 {
     font-size: 50px;
     margin-block: 0px;
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+  }
+
+  .score p {
+    font-size: 45px;
   }
 
   .playAgain {
     font-size: 120px;
   }
+
+  .click-counter-span {
+    margin: 0px 20px 0px 20px;
+    font-size: 100px;
+  }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 450px) {
   #ranking {
     width: 98vw;
     height: 50vh;
@@ -343,6 +353,32 @@ summary{
     width: 98vw;
     background-color: #011133;
     border: 15px solid #f2a516;
+  }
+
+  .score h1 {
+    font-size: 100px;
+    padding: 20px;
+  }
+  .score h3 {
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .click-counter-span {
+    margin: 0px 15px 0px 15px;
+    font-size: 50px;
+  }
+  .score p {
+    font-size: 33px;
+    padding: 10px;
+  }
+  .playAgain {
+    width: 60vw;
+    font-size: 100px;
+    -webkit-text-stroke: 5px #d95204;
+    line-height: 0.6em;
   }
 }
 
