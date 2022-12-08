@@ -28,17 +28,15 @@ const playAgainBtn = document.querySelector(".playAgain");
 let infoRanking = document.querySelector(".infoRanking");
 
 // Variables escoger modo
-let btnEasyGame = document.querySelector(".btnEasyGame")
-let btnHardGame = document.querySelector(".btnHardGame")
+let btnEasyGame = document.querySelector(".btnEasyGame");
+let btnHardGame = document.querySelector(".btnHardGame");
 
 // Escuchadore de eventos
 btnEasyGame.addEventListener("click", updateClock);
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
 playAgainBtn.addEventListener("click", playAgain);
-playAgainBtn.addEventListener("click", redirectHome);
 buttonClick.addEventListener("click", moveButton);
-
 
 userNameBtn.addEventListener("click", saveLocalStorageInfo);
 buttonClick.addEventListener("click", countClicks);
@@ -47,9 +45,8 @@ btnEasyGame.addEventListener("click", startEasyGame);
 btnHardGame.addEventListener("click", startHardGame);
 
 //Listener carga de pagina
+playAgainBtn.addEventListener("click", redirectHome);
 window.addEventListener("load", getUserAndScore);
 
-
-btnEasyGame.addEventListener('click', navigateToPlay);
-btnHardGame.addEventListener('click', navigateToPlay);
-
+btnEasyGame.addEventListener("click", navigateToPlay);
+btnHardGame.addEventListener("click", navigateToPlay);
