@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
-    <section id="username">
+    <section class="username">
       <h1>CLICK IN 10 SECONDS GAME</h1>
       <form>
         <h3>ENTER YOUR USERNAME:</h3>
         <input type="text" id="user-name" />
-        <button type="submit">NEXT</button>
+        <button id="next-btn" type="submit">NEXT</button>
       </form>
     </section>
-    <section id="startgame">
+    <section class="startgame">
       <button class="btnEasyGame">EASY</button>
       <button class="btnHardGame">HARD</button>
     </section>
-    <section id="play">
-      <div class="container-counters"> 
+    <section class="play">
+      <div class="container-counters">
         <div class="countdown"></div>
         <div class="click-counter"></div>
       </div>
@@ -29,17 +29,26 @@
         <div class="btn-clickHere" id="click-here-btn"></div>
       </div>
     </section>
-    <section id="score">
+    <section class="score">
       <h1>YOUR SCORE!</h1>
       <p>YOUR 10 SECONDS ARE DONE</p>
       <h3>YOU HAVE MADE <span class="click-counter"></span> CLICKS</h3>
       <button class="playAgain">play again</button>
     </section>
     <section id="ranking">
-      <h2>User Scores</h2>
-      <div class="infoRanking"></div>
-      <h2>Top Three</h2>
-      <div class="topThree"></div>
+      <h2>USER SCORES</h2>
+      <div class="currently-player"></div>
+      <details>
+        <summary>LAST ROUNDS</summary>
+        <div class="infoRanking"></div>
+      </details>
+      <details>
+        <summary>TOP THREE</summary>
+        <div class="topThree"></div>
+      </details>
+      
+      
+      
     </section>
 
     <script src="app.js" type="text/javascript"></script>
