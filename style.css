@@ -294,7 +294,46 @@ summary{
   }
 
   .username h1 {
-    font-size: 50px;
+    font-size: 55px;
+  }
+
+  .username h3 {
+    color: #d95204;
+    font-family: "gamer", sans-serif;
+    font-size: 35px;
+  }
+
+  .username input {
+    height: 7vh;
+    width: 70vw;
+    border: 14px solid #d95204;
+    font-size: 35px;
+  }
+
+  .username button {
+    width: 50vw;
+    background-color: #fecea800;
+    border: 1px solid #2a363b00;
+    cursor: pointer;
+    font-family: "gamer", sans-serif;
+    color: #f2a516;
+    font-size: 110px;
+    -webkit-text-stroke: 4px #d95204;
+  }
+
+  .startgame button {
+    width: 70vw;
+    border: 13px solid #f2a516;
+    font-size: 90px;
+    -webkit-text-stroke: 3px #d95204;
+    padding: 10px 25px 30px 25px;
+  }
+
+  .container-counters {
+    height: 20vh;
+    width: 98vw;
+    background-color: #011133;
+    border: 15px solid #f2a516;
   }
 }
 
